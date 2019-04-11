@@ -18,8 +18,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         
-        GMSServices.provideAPIKey("AIzaSyD56Spr8Ta3mOzOXXMh3bKUAXSQ3u-a-PE")
-        GMSPlacesClient.provideAPIKey("AIzaSyD56Spr8Ta3mOzOXXMh3bKUAXSQ3u-a-PE")
+        // INSERT YOUR API KEY HERE
+        let apiKey: String = "Your_key"
+        
+        GMSServices.provideAPIKey(apiKey)
+        GMSPlacesClient.provideAPIKey(apiKey)
         
         let frame = UIScreen.main.bounds
         window = UIWindow(frame: frame)

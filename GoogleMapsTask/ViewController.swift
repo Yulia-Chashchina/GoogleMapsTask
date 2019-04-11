@@ -97,8 +97,6 @@ class ViewController: UIViewController, CLLocationManagerDelegate, GMSMapViewDel
        self.addressLabel.text = text
     }
     
-                       
-                       
     
     // MARK: - Location Manager delegates
     
@@ -115,6 +113,7 @@ class ViewController: UIViewController, CLLocationManagerDelegate, GMSMapViewDel
         getAdress(position: location.coordinate)
         print(location.coordinate)
     }
+    
     
     // MARK: GMS Map View Delegate
     
@@ -137,6 +136,7 @@ class ViewController: UIViewController, CLLocationManagerDelegate, GMSMapViewDel
         marker.map = self.mapView
     }
     
+    
     //called when the map is idle
     func mapView(_ mapView: GMSMapView, idleAt position: GMSCameraPosition) {
         print("idleAt")
@@ -153,5 +153,4 @@ class ViewController: UIViewController, CLLocationManagerDelegate, GMSMapViewDel
         print("new position: \(position)")
         getAdress(position: position)
     }
-
 }
